@@ -1,0 +1,64 @@
+#include <iostream>
+using namespace std;
+
+struct Node{
+  int data;
+  Node * next;
+};
+
+void printlinlist(Node * n){
+  while(n != NULL){
+    cout<<n->data<<" ";
+    n= n->next; 
+  }
+}
+
+int main() 
+{
+  Node * head = new Node();
+  Node * second = new Node();
+  Node * third = new Node();
+  
+  head->data = 45;
+  head->next = second;
+ 
+  second->data = 55;
+  second->next = third;
+  
+  third->data = 75;
+  third->next = NULL;
+  
+  //head->next = third;
+  
+  // Node * midnode = new Node();
+  // midnode->data = 65;
+  // midnode ->next = third;
+  // second->next = midnode; 
+  
+  // second->next = NULL;
+  
+  // head = second;
+  
+  // Node * vinod = new Node();
+  // vinod->data = 24;
+  // vinod ->next = second;
+  // head->next = vinod; 
+  
+  // Node *insertatend = new Node();
+  // insertatend->data = 35;
+  // third->next = insertatend;
+  // insertatend->next = NULL;
+  
+  // Node *insertatends = new Node();
+  // insertatends->data = 135;
+  // insertatend->next = insertatends;
+  // insertatends->next = NULL;
+
+  // Node *insertatagainfirst = new Node();
+  // insertatagainfirst->data = 25;
+  // insertatagainfirst->next = head;
+  // head = insertatagainfirst;
+  
+  printlinlist(head);
+  return 0;
+}
